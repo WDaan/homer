@@ -1,5 +1,7 @@
 # Homer
 
+### forked from [bastienwirtz/homer](https://github.com/bastienwirtz/homer)
+
 A dead simple static **HOM**epage for your serv**ER** to keep your services on hand, from a simple `yaml` configuration file.
 
 **Check out the live demo [here](https://homer-demo.netlify.app).**

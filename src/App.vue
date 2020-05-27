@@ -157,7 +157,6 @@ export default {
 
             this.config = merge(defaults, config)
 
-            console.log(this.config)
             this.services = this.config.services
             document.title = `${this.config.title} | ${this.config.subtitle}`
         } catch (error) {
@@ -166,7 +165,7 @@ export default {
     },
     methods: {
         getConfig: function () {
-            return fetch('config.yml').then(function (response) {
+            return fetch('assets/config.yml').then(function (response) {
                 if (response.status != 200) {
                     return
                 }

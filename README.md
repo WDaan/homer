@@ -30,10 +30,11 @@ If you need authentication support, you're on your own (it can be secured using 
 ### Using docker
 
 ```
-sudo docker run -p 8080:8080 -v /your/local/config.yml:/app/config.yml -v /your/local/assets/:/app/assets wdaan/homer:latest
+sudo docker run -p 8080:8080 -v /your/local/assets/:/app/assets wdaan/homer:latest
 ```
 
 ### Using docker-compose
+
 ```
   homer:
     image: wdaan/homer:latest
@@ -41,10 +42,10 @@ sudo docker run -p 8080:8080 -v /your/local/config.yml:/app/config.yml -v /your/
     ports:
       - 8080:80
     volumes:
-      - ./homer/config.yml:/app/config.yml
       - ./homer/assets:/app/assets
 
 ```
+
 ### Manually
 
 Homer is a static page that need to be generated from the source in this repository.

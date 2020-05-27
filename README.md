@@ -27,21 +27,28 @@ If you need authentication support, you're on your own (it can be secured using 
 
 ### Using docker
 
-```sh
-sudo docker run -p 8080:8080 -v /your/local/config.yml:/www/config.yml -v /your/local/assets/:/www/assets b4bz/homer:latest
+```
+sudo docker run -p 8080:8080 -v /your/local/config.yml:/app/config.yml -v /your/local/assets/:/app/assets wdaan/homer:latest
 ```
 
+### Using docker-compose
+```
+  homer:
+    image: wdaan/homer:latest
+    container_name: homer
+    ports:
+      - 8080:80
+    volumes:
+      - ./homer/config.yml:/app/config.yml
+      - ./homer/assets:/app/assets
+
+```
 ### Manually
 
 Homer is a static page that need to be generated from the source in this repository.
 Use the folowing command to build the project:
 
-```sh
-# Using yarn (recommended)
-yarn install
-yarn build
-
-# **OR** Using npm
+```
 npm install
 npm run build
 ```
@@ -51,12 +58,7 @@ Use it like any static HTML content (use a webserver or open the html index dire
 
 ## Developement
 
-```sh
-# Using yarn (recommended)
-yarn install
-yarn serve
-
-# **OR** Using npm
+```
 npm install
 npm run serve
 ```

@@ -1,20 +1,20 @@
-import Vue from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
+import Vue from 'vue'
+import App from './App.vue'
+import './registerServiceWorker'
 
-import "@fortawesome/fontawesome-free/css/all.css";
-import "@fortawesome/fontawesome-free/js/all.js";
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
 
-import "./assets/app.scss";
+import './assets/app.scss'
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
-Vue.component("DynamicStyle", {
-  render: function (createElement) {
-    return createElement("style", this.$slots.default);
-  },
-});
+Vue.component('DynamicStyle', {
+    render: function (createElement) {
+        return createElement('style', this.$slots.default)
+    }
+})
 
 new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+    render: h => h(App)
+}).$mount('#app')

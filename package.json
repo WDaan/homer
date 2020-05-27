@@ -10,11 +10,14 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.13.0",
+        "axios": "^0.19.2",
         "bulma": "^0.8.2",
         "core-js": "^3.6.4",
         "js-yaml": "^3.14.0",
         "lodash.merge": "^4.6.2",
+        "moment-timezone": "^0.5.31",
         "register-service-worker": "^1.7.1",
+        "twemoji": "^13.0.0",
         "vue": "^2.6.11"
     },
     "devDependencies": {

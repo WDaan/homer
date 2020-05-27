@@ -53,6 +53,9 @@
                     @network:status-update="offline = $event"
                 />
                 <div v-if="!offline">
+                    <!-- Optional Time & Weather -->
+                    <TimeWeather :item="config.time_weather" />
+
                     <!-- Optional messages -->
                     <Message :item="config.message" />
 
@@ -124,6 +127,7 @@ import SearchInput from './components/SearchInput.vue'
 import SettingToggle from './components/SettingToggle.vue'
 import DarkMode from './components/DarkMode.vue'
 import DynamicTheme from './components/DynamicTheme.vue'
+import TimeWeather from './components/TimeWeather.vue'
 
 import defaultConfig from './assets/defaults.yml'
 
@@ -137,7 +141,8 @@ export default {
         SearchInput,
         SettingToggle,
         DarkMode,
-        DynamicTheme
+        DynamicTheme,
+        TimeWeather
     },
     data: function () {
         return {
@@ -154,6 +159,8 @@ export default {
         try {
             const defaults = jsyaml.load(defaultConfig)
             let config = await this.getConfig()
+
+            console.log(config)
 
             this.config = merge(defaults, config)
 

@@ -16,6 +16,7 @@ It supports keyboard shortcuts:
 If you need authentication support, you're on your own (it can be secured using a web server auth module or exposing it only through a VPN network / SSH tunnel, ...)
 
 ![screenshot](https://raw.github.com/bastienwirtz/homer/master/screenshot.png)
+![screenshot2](https://imgur.com/a/ed6E655.png)
 
 ## Roadmap
 
@@ -140,6 +141,15 @@ message:
     style: 'is-warning'
     title: 'Optional message!'
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula.'
+
+# Time & Weather
+time_weather:
+    time: true
+    timezone: 'Europe/Brussels'
+    weather: true
+    city: 'Ghent'
+    token: 'xxxx' #api key from https://openweathermap.org/
+
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links

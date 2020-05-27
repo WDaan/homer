@@ -16,7 +16,7 @@ It supports keyboard shortcuts:
 If you need authentication support, you're on your own (it can be secured using a web server auth module or exposing it only through a VPN network / SSH tunnel, ...)
 
 ![screenshot](https://raw.github.com/bastienwirtz/homer/master/screenshot.png)
-![screenshot2](https://imgur.com/a/ed6E655.png)
+![screenshot2](https://i.imgur.com/cmscn45.png)
 
 ## Roadmap
 
